@@ -1,0 +1,14 @@
+{
+  "name": "stater2",
+  "version": "1.0.0",
+  "description": "practicing css",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
