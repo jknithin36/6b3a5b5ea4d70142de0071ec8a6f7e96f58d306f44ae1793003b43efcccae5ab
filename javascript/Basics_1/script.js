@@ -146,6 +146,102 @@
 
 // console.log(century);
 
+////Type Conversion
+
+// const input = "1991";
+// console.log(input); // STRING "1991"
+// console.log(Number(input) + 1); // NUMBER 1992
+// console.log(String(23), 23);
+
+//// Type Coercion
+//// + string
+// console.log("i am " + 23 + " old");
+//// - Number
+// console.log("34" - "4" - 20);
+
+////eg
+// let n = "1" + 1;
+// n = n - 1;
+// console.log(n);
+
+// console.log(2 + 3 + 4 + "5");
+// console.log("10" - "4" - "3" - 2 + "5");
+
+////Truthy and Falsy Values
+////falsy = 0 "" undefined null NaN are flase in boolean
+// console.log(Boolean(0));
+// console.log(Boolean(1));
+// console.log(Boolean(""));
+
+// const money = 0;
+// if (money) {
+//   console.log("DON't spend all of it");
+// } else {
+//   console.log("Work hard man...!");
+// }
+
+// const moneyOne = 2;
+// if (moneyOne) {
+//   console.log("DON't spend all of it");
+// } else {
+//   console.log("Work hard man...!");
+// }
+
+// let height;
+// if (height) {
+//   console.log("YAY! height is undefined");
+// } else {
+//   console.log("NOT DEFINED");
+// }
+
+//// Equality Operators: == vs. ===
+//// ==== doesn't peform typrcoerison(Strict equality)
+//// == peform(loose equality)
+// const age = 18;
+
+// if (age === 18) {
+//   console.log("You just became eligible..!");
+// }
+
+// const favorite = Number(prompt("Whats your favorite Number"));
+// console.log(favorite);
+// console.log(typeof favorite);
+
+// if (favorite == 23) {
+//   console.log("It is an amazing Number");
+// }
+
+// if (favorite === 23) {
+//   console.log("It is an amazing Number");
+// } else if (favorite === 5) {
+//   console.log("YEAH ! It is also an amazing Number");
+// } else {
+//   console.log("SORRY MAN........!");
+// }
+//// !== (different STRICT VERSION)
+//// != (Different LOOSE VERSION)
+
+////Boolean Logic
+//// AND&&, OR||, NOT !
+
+// const hasDrivingLicense = true;
+// const hasGoodVision = true;
+
+// console.log(hasDrivingLicense && hasGoodVision);
+// console.log(hasDrivingLicense || hasGoodVision);
+// console.log(!hasDrivingLicense);
+
+// const shouldDrive = hasDrivingLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//   console.log("Go AHEAD ... !");
+// } else {
+//   console.log("No");
+// }
+
+// const isTired = true;
+// console.log(hasDrivingLicense && hasGoodVision && isTired);
+
 ////
 ////
 ////
@@ -223,3 +319,40 @@
 
 // console.log(description);
 // console.log(descriptionTwo);
+
+//// Type Conversion and Coercion
+
+// console.log("9" - "5"); // 95
+// console.log("19" - "13" + "17"); //617
+// console.log("19" - "13" + 17);
+// console.log("123" < 57);
+// console.log(5 + 6 + "11" + 9 - 4 - 2);
+
+//// LECTURE: Equality Operators: == vs. ===
+
+// const numNeighbours = Number(prompt("enter the Number"));
+
+// if (numNeighbours === 1) {
+//   console.log("'Only 1 border!");
+// } else if (numNeighbours > 1) {
+//   console.log("'More than 1 border' in case ");
+// } else {
+//   console.log("No borders");
+// }
+
+// console.log(typeof numNeighbours);
+
+//// CODING CHALLENGE 3
+
+// const scoreDolphins = (97 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
+
+// console.log(scoreDolphins, scoreKoalas);
+
+// if (scoreDolphins > scoreKoalas) {
+//   console.log("Dolphins win the trophy");
+// } else if (scoreKoalas > scoreDolphins) {
+//   console.log("Koalas win the trophy");
+// } else if (scoreKoalas === scoreDolphins) {
+//   console.log("Both win the trophy");
+//}
