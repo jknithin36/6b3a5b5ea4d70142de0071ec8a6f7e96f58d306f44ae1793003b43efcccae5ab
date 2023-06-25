@@ -108,7 +108,71 @@
 //// FUNCTION EXPRESSION const functionName = function(parameters){code}
 //// ARROW FUNCTION const functioName = (parameters)=>{code}
 
-////
+//// Introduction to Arrays
+
+// const friends = ["Nithin", "abhinav", "phani"];
+// console.log(friends);
+
+// const years = new Array(1991, 1992, 1993);
+
+// console.log(friends[2]);
+
+// console.log(friends.length);
+// console.log(friends[friends.length - 2]);
+
+// friends[2] = "jay";
+// console.log(friends);
+// console.log(friends[2]);
+
+// const fristName = "JK";
+// const names = [fristName, "Nithin", friends];
+
+// console.log(names);
+// console.log(names.length);
+
+//// EXERCISE
+
+// const calcAge = function (birthYear) {
+//   return 2023 - birthYear;
+// };
+
+// const yeard = [1990, 1967, 1899.2018];
+
+// const age1 = calcAge(yeard[0]);
+// const age2 = calcAge(yeard[1]);
+// console.log(age1);
+
+// const ages = [calcAge(yeard[0]), calcAge(yeard[1])];
+// console.log(ages);
+
+//// Basic Array Operations (Methods
+//// push() - - adds new element at end
+//// unShift() - - adds new element at beginning
+////  pop() -- removes the last elemnt
+//// shift( ) -- removes the frist elemnt
+//// indexOf() -- shows the index of element
+//// length() -- shows the length of array
+//// includes() -- true and false if element is present
+
+// const friends = ["nithin", "abhinav", "shiva"];
+// friends.push("chintu");
+// console.log(friends.length);
+// friends.unshift("varun");
+// console.log(friends[0]);
+// friends.pop();
+// console.log(friends);
+// friends.shift();
+// console.log(friends);
+// friends.push(23);
+// console.log(friends.indexOf("abhinav"));
+// console.log(friends.indexOf("nithin"));
+// console.log(friends.includes("nithin"));
+// console.log(friends.includes("chintu"));
+// console.log(friends.includes(23));
+// if (friends.includes("nithin")) {
+//   console.log(`you have a friend named nithin`);
+// }
+// ////
 ////
 ////
 ////
@@ -186,3 +250,40 @@
 // };
 
 // checkWinner(scoreDolphins, scoreKolas);
+
+////LECTURE: Introduction to Arrays
+// const countriesPopulation = [140, 150, 79, 33, 5];
+// if (countriesPopulation.length === 5) {
+//   console.log(countriesPopulation.length);
+// }
+
+// const percentages = [
+//   percentagePopulation(countriesPopulation[0]),
+//   percentagePopulation(countriesPopulation[1]),
+//   percentagePopulation(countriesPopulation[2]),
+//   percentagePopulation(countriesPopulation[3]),
+//   percentagePopulation(countriesPopulation[4]),
+// ];
+
+// console.log(percentages);
+
+////LECTURE: Basic Array Operations (Methods)
+
+// const neighbours = ["pakisthan", "bangladesh", "srilanka"];
+// neighbours.push("Nepal");
+// neighbours.pop();
+// if (!neighbours.includes("Germany")) {
+//   console.log("Probably not a central European country :D");
+//   neighbours[neighbours.indexOf("bangladesh")] = "Republic of Sweden";
+//   console.log(neighbours);
+// }
+//// Challenge 2
+
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * .15 : bill * .2;
+// }
+
+// const bills = [125, 555, 44];
+
+// const tips =  [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
+// console.log(tips);
