@@ -151,7 +151,7 @@
 ////  pop() -- removes the last elemnt
 //// shift( ) -- removes the frist elemnt
 //// indexOf() -- shows the index of element
-//// length() -- shows the length of array
+//// length -- shows the length of array
 //// includes() -- true and false if element is present
 
 // const friends = ["nithin", "abhinav", "shiva"];
@@ -172,6 +172,83 @@
 // if (friends.includes("nithin")) {
 //   console.log(`you have a friend named nithin`);
 // }
+
+//// OBJECTS
+
+// const jk = {
+//   fristName: "JK",
+//   lastName: "Nithin",
+//   age: 22,
+//   role: "Student",
+//   friends: ["shiva", "abhi", "chintu", "moon"],
+// };
+
+// console.log(jk);
+
+// ways to retrive data
+// console.log(jk.lastName); //name.property
+// console.log(jk["lastName"]); // name.['property']
+
+// const nameKey = "Name";
+// console.log(jk["frist" + nameKey]);
+// console.log(jk["last" + nameKey]);
+
+// const interestedIn = prompt(
+//   "what do you want to know about Jk ? choose between fristName, lastName, age, role,friends "
+// );
+
+// if (jk[interestedIn]) {
+//   console.log(jk[interestedIn]);
+// } else {
+//   console.log("sorry i can't get you");
+// }
+
+// jk.location = "India";
+// jk["twitter"] = "jknithin@36";
+
+// console.log(jk);
+
+//// challenge
+
+//// jk has 3 friend but best friend is moon
+
+// console.log(
+//   `${jk.fristName} has ${jk.friends.length} friends best friend is ${
+//     jk.friends[jk.friends.length - 1]
+//   }`
+// );
+
+//// OBJECT METHODS
+
+//// this = means name of object
+// const shiva = {
+//   fristName: "Shiva",
+//   lastName: "Prasad",
+//   birthYear: 1999,
+//   job: "Data Analyst",
+//   friends: ["BObby", "Chinnu", "Bunny"],
+//   hasDrivingLicense: true,
+// calcAge: function () {
+//   this.age = 2023 - this.birthYear;
+//   return this.age;
+// },
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear;
+//     return this.age;
+//   },
+
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${
+//       this.job
+//     }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+//   },
+// };
+
+// console.log(shiva.getSummary());
+// console.log(shiva);
+// console.log(shiva.age);
+
+// console.log(shiva["age"]);
 // ////
 ////
 ////
@@ -287,3 +364,25 @@
 
 // const tips =  [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
 // console.log(tips);
+
+//// LECTURE: Introduction to Objects
+// const myState = {
+//   state: "Telangana",
+//   capital: "Hyderabad",
+//   language: "Telugu",
+//   population: 30,
+//   neighbours: ["pakisthan", "Bangladesh", "srilanka"],
+// };
+
+//// LECTURE: Dot vs. Bracket Notation
+
+//// : 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'
+
+// console.log(
+//   `${myState.state} has ${myState.population} million ${myState.language} - speaking people, ${myState.neighbours.length} neighbouring countries and a capital called ${myState.capital}  `
+// );
+
+// myState.population += 2;
+// console.log(myState.population);
+// myState["population"] -= 2;
+// console.log(myState["population"]);
