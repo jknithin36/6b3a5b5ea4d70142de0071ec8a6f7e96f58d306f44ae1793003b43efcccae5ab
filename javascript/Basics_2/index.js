@@ -249,6 +249,94 @@
 // console.log(shiva.age);
 
 // console.log(shiva["age"]);
+
+//// Iteration: The for Loop
+
+//// for loops keep running while condition is true
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weigths reception ${rep} `);
+// }
+
+//// Looping Arrays, Breaking and Continuing
+
+// const srinu = ["Jk Srinivasulu", "54", "Farmer", ["Nani,Bablu,Revathi"]];
+
+// const types = [];
+
+// for (let i = 0; i < srinu.length; i++) {
+//   console.log(srinu[i], typeof srinu[i]);
+
+//    types[i] = typeof srinu[i];
+//   types.push(typeof srinu[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 1992, 1993, 1994];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2023 - years[i]);
+// }
+
+// console.log(ages);
+
+//// continue and break
+// console.log("--- ONLY STRINGS ---");
+// for (let i = 0; i < srinu.length; i++) {
+//   if (typeof srinu[i] !== "string") continue;
+
+//   console.log(srinu[i], typeof srinu[i]);
+// }
+
+// console.log("--- BREAK WITH NUMBER ---");
+// for (let i = 0; i < srinu.length; i++) {
+//   if (typeof srinu[i] === "number") break;
+
+//   console.log(srinu[i], typeof srinu[i]);
+// }
+
+//// Looping Backwards and Loops in Loops
+
+// const bk = ["Shyam", "Mega", 2023, "student", ["akshay,radha,venkatesh"], true];
+
+// for (let i = bk.length; i >= 0; i--) {
+//   console.log(i, bk[i]);
+// }
+
+// LOOP INSIDE LOOP
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`--------starting exercise ${exercise}`);
+
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`lifting weigth repition ${rep}`);
+//   }
+// }
+
+//// WHILE LOOP
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weigths reception ${rep} `);
+// }
+
+////////////////////   VS //////////////////////////
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`Lifting weigths reception ${rep} `);
+//   rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+// while (dice !== 6) {
+//   console.log(`you rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+
+//   if (dice === 6) console.log("Loop is about to end");
+// }
+
 // ////
 ////
 ////
@@ -386,3 +474,40 @@
 // console.log(myState.population);
 // myState["population"] -= 2;
 // console.log(myState["population"]);
+
+////  challenge 3
+
+// const mark = {
+//   fullName: 'Mark Miller',
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// };
+
+// const john = {
+//   fullName: 'John Smith',
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// };
+
+// mark.calcBMI();
+// john.calcBMI();
+
+// if (mark.bmi > john.bmi) {
+//   console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`)
+// } else if (john.bmi > mark.bmi) {
+//   console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`)
+// }
+
+//// LECTURE: Iteration: The for Loop
+
+// for (let i = 1; i <= 50; i++) {
+//   console.log(`Voter number ${i} is currently voting`);
+// }
