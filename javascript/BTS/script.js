@@ -39,3 +39,55 @@ function caclAge(birthYear) {
 const firstName = 'Nithin';
 
 caclAge(1991);
+
+// HOISTING Practice
+// Undefined
+// console.log(me);
+// Reference ERROR
+// console.log(role);
+// Reference ERROR
+// console.log(year);
+
+var me = 'Nithin';
+let role = 'Student';
+const year = 1992;
+
+// WE CAN FUNCTION DECLARATIONS BEFORE DECLARATION
+console.log(add(2, 3));
+// REFERENCE ERROR BECAUSE IT IS A CONST
+// console.log(addExp(2, 3));
+
+// REFERENCE ERROR BECAUSE IT IS A CONST
+// console.log(addArrow(2, 3));
+
+function add(a, b) {
+  return a + b;
+}
+
+const addExp = function (a, b) {
+  return a + b;
+};
+
+const addArrow = (a, b) => {
+  return a + b;
+};
+
+// Example
+
+// ALL PRODUCTS DELETED BECAUSE VAR IS UNDEFINED
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log('All Products deleted');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(x === window.y);
+console.log(x === window.z);
+// THIS KEYWORD
