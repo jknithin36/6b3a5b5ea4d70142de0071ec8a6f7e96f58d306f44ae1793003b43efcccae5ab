@@ -288,4 +288,267 @@ console.log(guestCorrect);
 
 const rest1 = {
   name: 'capri',
+  numGuests: 0,
 };
+
+const rest2 = {
+  name: 'La pizza',
+  owner: 'Nithin',
+};
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+rest2.owner = rest2.owner && '<Anynomous>';
+
+console.log(rest1['numGuests']);
+console.log(rest2['numGuests']);
+console.log(rest2.owner);
+
+// Parctice 1
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    p: 3.25,
+    team2: 6.5,
+  },
+};
+
+// 1
+
+const [players1, players2] = game.players;
+console.log(players1, players2);
+
+// 2
+
+const [gk, ...fieldplayers] = players1;
+console.log(gk, fieldplayers);
+
+// 3
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+//4
+
+const playersFinal = [...players1, 'Thiago', 'Coutinho', 'periscic'];
+
+// 5
+
+const {
+  odds: { team1, p: draw, team2 },
+} = game;
+
+console.log(team1, p, team2);
+
+//6
+
+const printGoals = function (...players) {
+  console.log(`${players.length} goals are scored`);
+};
+
+printGoals('Davies', 'Muller', 'Lewandowski', 'Limmich');
+printGoals('Davies', 'Muller');
+printGoals(...game.scored);
+
+// 7
+
+team1 < team2 && console.log(`Team 1 is more likely to win`);
+team1 > team2 && console.log(`Team 1 is more likely to win`);
+
+// Looping Arrays: The for-of Loop
+
+const menuJ = [...restaurantO.starterMenu, ...restaurantO.mainMenu];
+
+for (const item of menuJ) console.log(item);
+
+for (const item of menuJ.entries()) {
+  console.log(item);
+}
+
+//Enhanced Object Literals
+
+// Optional Chaining (?.)~
+
+const users = [
+  {
+    name: 'Nithin',
+    email: 'jknithin36@gmaiil.com',
+  },
+];
+console.log(users[0]?.name ?? 'user array is empty');
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+// SETS & MAPS
+
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Omlet',
+  'Pizza',
+  'Pasta',
+]);
+
+console.log(orderSet);
+
+console.log(new Set('Nithin'));
+// stirng also iterables
+
+console.log(orderSet.size);
+
+console.log(orderSet.has('Pizza'));
+
+orderSet.add('Garlic Bread');
+orderSet.add('Garlic Bread');
+orderSet.delete('Omlet');
+//orderSet.clear();
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const staffUnique = [...new Set(staff)];
+
+console.log(staffUnique);
+
+// NOTE SETS ARE NOT TO REPLACE ARRAYS THEY ARE USED TO STORE NON DUPLICATE VALUES
+
+// MAPS
+
+const restO = new Map();
+
+restO.set('name', 'Classico Italiano');
+
+restO.set(1, 'Gadwal,India');
+console.log(restO.set(2, 'Kurnool,India'));
+
+restO
+  .set('categories', ['Indian', 'Americian', 'Russian', 'Portugal'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'WE are Open: D')
+  .set(false, 'we are Closed');
+
+console.log(restO.get('name'));
+console.log(restO.get(true));
+console.log(restO.get(1));
+
+const time = 8;
+
+console.log(restO.get(time > restO.get('open') && time < restO.get('close')));
+
+console.log(restO.has('categories'));
+restO.set(document.querySelector('h1'), 'Heading');
+restO.delete(2);
+console.log(restO);
+
+console.log(restO.size);
+
+const question = new Map([
+  ['Question', 'What is the Best Programming Language in the World'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try Again'],
+]);
+
+console.log(question);
+
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key} :${value}`);
+}
+
+// const answer = Number(prompt('Your answer'));
+
+// console.log(answer);
+
+// console.log(question.get(question.get('correct') === answer));
+
+// MAP --> ARRAY
+
+console.log([...question]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
+
+// EXERCISE 3
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+
+//1 .
+
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+
+// 2
+
+gameEvents.delete(64);
+
+//3
+
+console.log(
+  `An Event Happened, on average,every ${90 / gameEvents.size} minutes`
+);
+
+const timeO = [...gameEvents.keys()].pop();
+console.log(timeO);
+
+for (const [min, event] of gameEvents) {
+  const half = min <= 45 ? 'FIRST' : 'Second';
+  console.log(`[${half} HALF ] ${min} :${event}`);
+}
